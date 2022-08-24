@@ -1,0 +1,28 @@
+public class main {
+    static boolean palindrom(int a) {
+        int x, y, z = 0;
+        int temp = a;
+        while (temp != 0) {
+            System.out.println("^^^^^^^^^^^^^^^^");
+            System.out.println("Girilen Sayi => " + temp);
+
+            x = temp % 10;
+            System.out.println("Son sayi => " + x);
+
+            z = (z * 10) + x;
+            System.out.println("Palindrom mu => " + z);
+
+            temp = temp / 10;
+            System.out.println("Dongudeki sayimiz : " + temp);
+        }
+        if (a == z)
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(palindrom(9994));
+
+    }
+}
